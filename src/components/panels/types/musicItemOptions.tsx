@@ -218,7 +218,7 @@ export default function MusicItemOptions(props: IMusicItemOptionsProps) {
                                 numberOfLines={2}
                                 style={style.title}
                                 onPress={() => {
-                                    Clipboard.setString(musicItem.title);
+                                    Clipboard.setString(musicItem?.title ?? '');
                                     Toast.success('已复制到剪切板');
                                 }}>
                                 {musicItem?.title}
